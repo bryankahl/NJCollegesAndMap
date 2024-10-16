@@ -14,6 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // Test the NJCollegeModel
+        let collegeModel = NJCollegeModel()
+        collegeModel.loadColleges(from: "NJColleges") // Assuming JSON file is named NJColleges.json
+        collegeModel.printAllColleges() // Print the loaded colleges
         return true
     }
 
