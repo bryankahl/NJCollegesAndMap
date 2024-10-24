@@ -9,39 +9,27 @@ This is an iOS application that shows information about colleges in New Jersey. 
 - **Map View**: Uses MapKit to show the locations of all the colleges in New Jersey with interactive map markers. 
 - **Detail View**: Shows detailed view when user clicks on a college from the List View or Map View, and shows the name, address, and map locaiton of the college. 
 
-## How to Use
-
-1. **Summary Tab**: Get an overview of the number of colleges in different regions of New Jersey.
-2. **List Tab**: Browse through the list of colleges. Tap on a college to view detailed information.
-3. **Map Tab**: Explore the locations of colleges on an interactive map. Tap on a pin to see the college's name and navigate to its detail view.
-4. **Detail View**: View the full details of a selected college, including its address and a map showing its precise location.
-
 ## Technical Details
 
 - **Platform**: iOS
 - **Language**: Swift
 - **Frameworks**:
-  - **UIKit**: For user interface elements like labels, table views, and view controllers.
-  - **MapKit**: For displaying maps and adding annotations.
-  - **CoreLocation**: For working with geographic coordinates.
-- **Data**: Uses a JSON file (`NJColleges.json`) to store and load data about colleges, such as their name, address, county, and geographical coordinates.
+  - **UIKit**: For the user interface elements that are used including labels, table views, and view controllers.
+  - **MapKit**: To display maps and annotations.
+  - **CoreLocation**: For utilizing the geographic coordinates.
+- **Data**: Uses the JSON file (`NJColleges.json`) to store and load data about the colleges, including name, address, county, and coordinates.
 
 ## Project Structure
 
 - **Model**: 
   - `College` struct conforms to `Codable` for easy parsing of JSON data.
-  - `NJCollegeModel` loads and manages the college data from the JSON file.
+  - `NJCollegeModel` loads the JSON file and manages the college data. 
 - **View Controllers**:
-  - `SummaryViewController`: Displays the summary of colleges.
-  - `CollegesListViewController`: Displays a list of colleges in a table view.
-  - `MapViewController`: Shows college locations on a map.
-  - `CollegeDetailViewController`: Displays detailed information about a selected college.
-- **Assets**: Includes app icons and images used within the app.
+  - `SummaryViewController`: Displays the summary and count of the colleges. 
+  - `CollegesListViewController`: Displays the list of all the colleges in a Table View. 
+  - `MapViewController`: Shows where the college is located
+  - `CollegeDetailViewController`: Shows some details of the selected college. 
+- **Assets**: Contains the app logo.
 
-## Installation
-
-To run the NJ Colleges app:
-
-1. Clone the repository:
-   ```bash
-   git clone [repository-url]
+- ## Usage
+- To view my website,
