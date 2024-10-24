@@ -1,8 +1,6 @@
 # NJ Colleges App
 
-## Overview
-
-**NJ Colleges** is an iOS application that provides information about colleges across New Jersey. The app allows users to view a summary of colleges, browse a list of colleges, and explore their locations on an interactive map. Users can also view detailed information about each college, including its name, address, and location.
+This is an iOS application that shows information about colleges in New Jersey. The user can look at a summary view, a list of colleges, and see the locations of those colleges on a map. The user can see more detailed information about each college, including the name, address, and location on an interactive map. 
 
 ## Features
 
