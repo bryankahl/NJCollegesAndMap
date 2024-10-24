@@ -9,7 +9,7 @@ This is an iOS application that shows information about colleges in New Jersey. 
 - **Map View**: Uses MapKit to show the locations of all the colleges in New Jersey with interactive map markers. 
 - **Detail View**: Shows detailed view when user clicks on a college from the List View or Map View, and shows the name, address, and map locaiton of the college. 
 
-## Technical Details
+## Details
 
 - **Platform**: iOS
 - **Language**: Swift
@@ -32,4 +32,4 @@ This is an iOS application that shows information about colleges in New Jersey. 
 - **Assets**: Contains the app logo.
 
 - ## Usage
-- To view my website,
+- To view my website, 
