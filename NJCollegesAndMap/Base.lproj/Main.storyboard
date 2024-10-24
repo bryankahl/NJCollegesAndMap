@@ -1,24 +1,264 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XTh-yc-H2U">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="5hU-rt-grY">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarController id="XTh-yc-H2U" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MBV-HB-LEj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="yvY-4B-lDQ" kind="relationship" relationship="viewControllers" id="eVD-sR-mDL"/>
+                        <segue destination="0ZZ-cG-T6B" kind="relationship" relationship="viewControllers" id="NgP-bg-mza"/>
+                        <segue destination="zoo-Ld-n9k" kind="relationship" relationship="viewControllers" id="jVi-d3-m8h"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DAi-Nf-v7q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-593" y="-96"/>
+        </scene>
+        <!--Summary-->
+        <scene sceneID="5ma-b5-Ltb">
+            <objects>
+                <viewController id="yvY-4B-lDQ" customClass="SummaryViewController" customModule="NJCollegesAndMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bhX-ee-2qn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Colleges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viq-bt-W8E">
+                                <rect key="frame" x="117.66666666666667" y="79" width="157.66666666666663" height="27.666666666666671"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="North Jersey Colleges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiX-eC-sf9">
+                                <rect key="frame" x="112.33333333333333" y="126.66666666666669" width="168.33333333333337" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Central Jersey Colleges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcf-gN-Mgj">
+                                <rect key="frame" x="106.33333333333333" y="167.66666666666666" width="180.33333333333337" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="South Jersey Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pko-2j-gmy">
+                                <rect key="frame" x="124.00000000000001" y="208.66666666666666" width="145.33333333333337" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="822-0O-CC9"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="Kcf-gN-Mgj" firstAttribute="top" secondItem="yiX-eC-sf9" secondAttribute="bottom" constant="20" id="5qE-br-oxe"/>
+                            <constraint firstItem="viq-bt-W8E" firstAttribute="centerX" secondItem="bhX-ee-2qn" secondAttribute="centerX" id="8ZZ-4D-iwR"/>
+                            <constraint firstItem="yiX-eC-sf9" firstAttribute="top" secondItem="viq-bt-W8E" secondAttribute="bottom" constant="20" id="8ey-tg-yNl"/>
+                            <constraint firstItem="pko-2j-gmy" firstAttribute="centerX" secondItem="bhX-ee-2qn" secondAttribute="centerX" id="9Ap-GR-CML"/>
+                            <constraint firstItem="yiX-eC-sf9" firstAttribute="centerX" secondItem="bhX-ee-2qn" secondAttribute="centerX" id="ApI-z1-GmW"/>
+                            <constraint firstItem="yiX-eC-sf9" firstAttribute="centerX" secondItem="bhX-ee-2qn" secondAttribute="centerX" id="J93-tp-8mT"/>
+                            <constraint firstItem="viq-bt-W8E" firstAttribute="centerX" secondItem="bhX-ee-2qn" secondAttribute="centerX" id="TXh-hP-8xH"/>
+                            <constraint firstItem="Kcf-gN-Mgj" firstAttribute="centerX" secondItem="bhX-ee-2qn" secondAttribute="centerX" id="lV9-ig-8Yc"/>
+                            <constraint firstItem="pko-2j-gmy" firstAttribute="centerX" secondItem="bhX-ee-2qn" secondAttribute="centerX" id="rJa-PZ-ekj"/>
+                            <constraint firstItem="pko-2j-gmy" firstAttribute="top" secondItem="Kcf-gN-Mgj" secondAttribute="bottom" constant="20" id="sbq-RR-Gej"/>
+                            <constraint firstItem="viq-bt-W8E" firstAttribute="top" secondItem="822-0O-CC9" secondAttribute="top" constant="20" id="yEL-jK-1CC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Summary" image="house" catalog="system" selectedImage="house.fill" id="lWN-in-Zbt"/>
+                    <connections>
+                        <outlet property="centralJerseyLabel" destination="Kcf-gN-Mgj" id="acW-me-pVg"/>
+                        <outlet property="northJerseyLabel" destination="yiX-eC-sf9" id="jMQ-Tk-J2N"/>
+                        <outlet property="southJerseyLabel" destination="pko-2j-gmy" id="ATv-M9-Iyt"/>
+                        <outlet property="totalCollegesLabel" destination="viq-bt-W8E" id="qHy-uJ-PRL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcR-io-UhM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1007" y="-773"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="xDO-SF-QCc">
+            <objects>
+                <viewController id="0ZZ-cG-T6B" customClass="CollegesListViewController" customModule="NJCollegesAndMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v8g-19-yZ0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3K7-iK-9f6">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CollegeCell" id="G9w-Ly-Nba" customClass="CollegeTableViewCell" customModule="NJCollegesAndMap" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="58.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G9w-Ly-Nba" id="DQf-f9-I8H">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="58.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxP-Gh-6vO">
+                                                    <rect key="frame" x="36" y="19" width="321" height="20.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OxP-Gh-6vO" firstAttribute="leading" secondItem="DQf-f9-I8H" secondAttribute="leadingMargin" constant="16" id="NrQ-05-VkE"/>
+                                                <constraint firstItem="OxP-Gh-6vO" firstAttribute="top" secondItem="DQf-f9-I8H" secondAttribute="topMargin" constant="8" id="iPW-uQ-HKe"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="OxP-Gh-6vO" secondAttribute="bottom" constant="8" id="jeK-Bw-S2d"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="OxP-Gh-6vO" secondAttribute="trailing" constant="16" id="kOR-Xi-OPY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="QCe-Mp-z78" kind="show" identifier="showCollegeDetailSegue" id="zv1-zl-Fvu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Wu-qF-sKy"/>
+                        <constraints>
+                            <constraint firstItem="3K7-iK-9f6" firstAttribute="leading" secondItem="4Wu-qF-sKy" secondAttribute="leading" id="6ch-wR-hlK"/>
+                            <constraint firstItem="4Wu-qF-sKy" firstAttribute="bottom" secondItem="3K7-iK-9f6" secondAttribute="bottom" id="A2p-Vs-RxR"/>
+                            <constraint firstItem="3K7-iK-9f6" firstAttribute="centerX" secondItem="v8g-19-yZ0" secondAttribute="centerX" id="bsx-9L-lf2"/>
+                            <constraint firstItem="4Wu-qF-sKy" firstAttribute="trailing" secondItem="3K7-iK-9f6" secondAttribute="trailing" id="dcG-az-lUn"/>
+                            <constraint firstItem="3K7-iK-9f6" firstAttribute="centerY" secondItem="v8g-19-yZ0" secondAttribute="centerY" id="fpt-Fb-5dt"/>
+                            <constraint firstItem="3K7-iK-9f6" firstAttribute="top" secondItem="4Wu-qF-sKy" secondAttribute="top" id="z9r-xb-srG"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="List" image="list.bullet.clipboard" catalog="system" selectedImage="list.bullet.clipboard.fill" id="djl-3i-zy6"/>
+                    <connections>
+                        <outlet property="tableView" destination="3K7-iK-9f6" id="1eB-gd-sIH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pWa-dw-qFS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1680.1526717557251" y="-193.66197183098592"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="1nC-11-cUV">
+            <objects>
+                <viewController id="zoo-Ld-n9k" customClass="MapViewController" customModule="NJCollegesAndMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lg2-gv-kUY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yy-Ef-fDu">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ax2-U0-4Rt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8yy-Ef-fDu" firstAttribute="centerY" secondItem="Lg2-gv-kUY" secondAttribute="centerY" id="1ek-8I-Lpr"/>
+                            <constraint firstItem="8yy-Ef-fDu" firstAttribute="top" secondItem="ax2-U0-4Rt" secondAttribute="top" id="I6y-c4-rW7"/>
+                            <constraint firstItem="8yy-Ef-fDu" firstAttribute="leading" secondItem="ax2-U0-4Rt" secondAttribute="leading" id="PgB-Ou-Bpv"/>
+                            <constraint firstItem="ax2-U0-4Rt" firstAttribute="bottom" secondItem="8yy-Ef-fDu" secondAttribute="bottom" id="bI8-De-83S"/>
+                            <constraint firstItem="8yy-Ef-fDu" firstAttribute="centerX" secondItem="Lg2-gv-kUY" secondAttribute="centerX" id="gK9-1e-l3s"/>
+                            <constraint firstItem="ax2-U0-4Rt" firstAttribute="trailing" secondItem="8yy-Ef-fDu" secondAttribute="trailing" id="ofl-WO-fme"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" selectedImage="map.fill" id="JoS-MO-EHg"/>
+                    <connections>
+                        <outlet property="mapView" destination="8yy-Ef-fDu" id="3Gv-uD-gjS"/>
+                        <segue destination="QCe-Mp-z78" kind="show" identifier="showCollegeDetailFromMapSegue" id="ZUB-At-gLy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GjV-vY-C2Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1007" y="-1450"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="UsO-A3-0tK">
+            <objects>
+                <viewController id="QCe-Mp-z78" customClass="CollegeDetailViewController" customModule="NJCollegesAndMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y0R-w2-ath">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="College Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRk-eL-aJb">
+                                <rect key="frame" x="71.666666666666686" y="20" width="250" height="28.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="USp-Vd-vrX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItJ-z9-W7N">
+                                <rect key="frame" x="71.666666666666686" y="56.666666666666664" width="250" height="19.333333333333336"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="DTp-3D-oYB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klN-u0-t4f">
+                                <rect key="frame" x="0.0" y="92" width="393" height="750"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QSg-tV-HC5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ItJ-z9-W7N" firstAttribute="top" secondItem="mRk-eL-aJb" secondAttribute="bottom" constant="8" id="4xh-cB-HCo"/>
+                            <constraint firstItem="ItJ-z9-W7N" firstAttribute="centerX" secondItem="Y0R-w2-ath" secondAttribute="centerX" id="B8V-Zf-0bD"/>
+                            <constraint firstItem="QSg-tV-HC5" firstAttribute="trailing" secondItem="klN-u0-t4f" secondAttribute="trailing" id="Hgm-Ug-hAi"/>
+                            <constraint firstItem="klN-u0-t4f" firstAttribute="top" secondItem="ItJ-z9-W7N" secondAttribute="bottom" constant="16" id="PDO-HA-BmQ"/>
+                            <constraint firstItem="klN-u0-t4f" firstAttribute="leading" secondItem="QSg-tV-HC5" secondAttribute="leading" id="ea0-Go-Wnh"/>
+                            <constraint firstItem="mRk-eL-aJb" firstAttribute="centerX" secondItem="Y0R-w2-ath" secondAttribute="centerX" id="h6t-YY-Ktr"/>
+                            <constraint firstItem="mRk-eL-aJb" firstAttribute="top" secondItem="QSg-tV-HC5" secondAttribute="top" constant="20" id="jpY-mR-3Ig"/>
+                            <constraint firstItem="QSg-tV-HC5" firstAttribute="bottom" secondItem="klN-u0-t4f" secondAttribute="bottom" id="yla-BG-Uqh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Detail" image="rectangle.portrait.and.arrow.right" catalog="system" selectedImage="rectangle.portrait.and.arrow.right.fill" id="C37-Z5-sEx"/>
+                    <navigationItem key="navigationItem" id="34E-ax-At1"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="ItJ-z9-W7N" id="3SN-Wb-xGX"/>
+                        <outlet property="mapView" destination="klN-u0-t4f" id="87M-Vc-RI9"/>
+                        <outlet property="nameLabel" destination="mRk-eL-aJb" id="N8X-zk-YHd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="alK-0H-Xz0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="-773"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zv1-zl-Fvu"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="list.bullet.clipboard" catalog="system" width="98" height="128"/>
+        <image name="list.bullet.clipboard.fill" catalog="system" width="98" height="128"/>
+        <image name="map" catalog="system" width="128" height="112"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="109"/>
+        <image name="rectangle.portrait.and.arrow.right.fill" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
