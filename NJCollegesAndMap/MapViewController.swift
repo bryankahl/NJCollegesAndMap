@@ -17,11 +17,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set up the map view
+        // Set up map view
         mapView.delegate = self
         mapView.showsUserLocation = true
 
-        // Load colleges data (replace with your actual data-loading logic)
+        // Load colleges data
         let model = NJCollegeModel()
         model.loadColleges(from: "NJColleges")
         colleges = model.colleges
@@ -46,10 +46,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 return nil
             }
             
-            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
 
             if annotationView == nil {
-                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 annotationView?.canShowCallout = true
                 annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             } else {
@@ -82,7 +82,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             
         }
         
-        // Zoom the map to show all annotations
+        // Zoom map to show all annotations
         if let firstAnnotation = mapView.annotations.first {
             let region = MKCoordinateRegion(center: firstAnnotation.coordinate, latitudinalMeters: 50000, longitudinalMeters: 50000)
             mapView.setRegion(region, animated: true)

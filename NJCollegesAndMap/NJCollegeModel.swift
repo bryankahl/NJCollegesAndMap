@@ -7,13 +7,13 @@
 
 import Foundation
 
-// Struct to represent the coordinates in the geometry field
+// Struct represents geometry field from json file
 struct Geometry: Codable {
     let type: String
     let coordinates: [Double]
 }
 
-// Struct to represent the properties field
+// Struct represents CollegeProperties field from json file
 struct CollegeProperties: Codable {
     let fid: Int
     let objectID: Int
@@ -48,7 +48,7 @@ struct CollegeProperties: Codable {
     }
 }
 
-// Struct to represent the overall college data
+// Struct that represents my overall college data
 struct College: Codable {
     let id: Int
     let geometry: Geometry
@@ -61,11 +61,11 @@ struct College: Codable {
     }
 }
 
-// Class to handle the model's data
+// Class that handles the model's data
 class NJCollegeModel {
     var colleges: [College] = []
 
-    // Load and decode the JSON data
+    // Load the JSON data
     func loadColleges(from fileName: String) {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
             do {
@@ -81,7 +81,7 @@ class NJCollegeModel {
         }
     }
 
-    // Print all colleges to the console for testing
+    // This just prints all the colleges below to test it before i started storyboard
     func printAllColleges() {
         for college in colleges {
             print("College: \(college.properties.name), Address: \(college.properties.address), City: \(college.properties.city), State: \(college.properties.state), Coordinates: \(college.geometry.coordinates)")

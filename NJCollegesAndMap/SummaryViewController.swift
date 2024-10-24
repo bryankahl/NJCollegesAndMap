@@ -24,19 +24,19 @@ class SummaryViewController: UIViewController {
         model.loadColleges(from: "NJColleges")
         colleges = model.colleges
 
-        // Calculate and display summary data
+        // Calculate/display summary data
         displaySummary()
     }
     
     func displaySummary() {
             let totalColleges = colleges.count
             
-            // Define latitude ranges for North, Central, and South Jersey
+            // Define latitude ranges
             let northJerseyColleges = colleges.filter { $0.geometry.coordinates[1] > 40.47368 }.count
             let centralJerseyColleges = colleges.filter { $0.geometry.coordinates[1] <= 40.47368 && $0.geometry.coordinates[1] >= 39.95219 }.count
             let southJerseyColleges = colleges.filter { $0.geometry.coordinates[1] < 39.95219 }.count
 
-            // Update the labels with the counts
+            // Update labels with counts
             totalCollegesLabel.text = "Total Colleges: \(totalColleges)"
             northJerseyLabel.text = "North Jersey Colleges: \(northJerseyColleges)"
             centralJerseyLabel.text = "Central Jersey Colleges: \(centralJerseyColleges)"

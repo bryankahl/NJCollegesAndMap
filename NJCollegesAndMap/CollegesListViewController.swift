@@ -15,12 +15,12 @@ class CollegesListViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set up the table view
+        // Set up table view
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CollegeCell")
 
-        // Load colleges data (replace with your actual data-loading logic)
+        // Load colleges data
         let model = NJCollegeModel()
         model.loadColleges(from: "NJColleges")
         colleges = model.colleges
