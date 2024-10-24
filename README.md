@@ -2,12 +2,12 @@
 
 This is an iOS application that shows information about colleges in New Jersey. The user can look at a summary view, a list of colleges, and see the locations of those colleges on a map. The user can see more detailed information about each college, including the name, address, and location on an interactive map. 
 
-## Features
+## Key Features
 
-- **Summary View**: Displays the total number of colleges and counts of colleges in North, Central, and South Jersey.
-- **List View**: Shows a list of colleges, displaying the name and county for each.
-- **Map View**: Uses MapKit to show the locations of colleges across New Jersey with interactive map pins.
-- **Detail View**: Provides detailed information about a selected college, including its address and a map view of the college's location.
+- **Summary View**: Shows the total amount of colleges in New Jersey, and splits them up into 3 separate sections: North, Central, and South Jersey. The counts of how many colleges in each section is displayed. 
+- **List View**: Shows the list of all the colleges in New Jersey
+- **Map View**: Uses MapKit to show the locations of all the colleges in New Jersey with interactive map markers. 
+- **Detail View**: Shows detailed view when user clicks on a college from the List View or Map View, and shows the name, address, and map locaiton of the college. 
 
 ## How to Use
 
