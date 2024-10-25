@@ -32,4 +32,4 @@ This is an iOS application that shows information about colleges in New Jersey. 
 - **Assets**: Contains the app logo.
 
 - ## Usage
-- To view my website, 
+- To view the app, use the files provided and open in Xcode!
